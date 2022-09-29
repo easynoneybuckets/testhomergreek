@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+       <h1>What would you like us to build / Manage ? </h1>
+       <form class="form cf" id="form" action="https://formsubmit.co/andre@onelytech.com" method="POST">
+         <section class="plan cf">
+           <h5>*you can select multiple boxes</h5>
+           <input type="checkbox" name="checkbox1" id="logo" value="logo"><label class="logo-label four col" for="logo">Logo & Branding</label>
+           <input type="checkbox" name="checkbox1" id="website" value="website" checked><label class="website-label four col" for="website">Website</label>
+           <input type="checkbox" name="checkbox1" id="mobile" value="mobile"><label class="mobile-label four col" for="mobile">Mobile</label>
+           <input type="checkbox" name="checkbox1" id="ads" value="ads"><label class="ads-label four col" for="ads">Buy Ads</label>
+           <input type="checkbox" name="checkbox1" id="seo" value="seo"><label class="seo-label four col" for="seo">SEO</label>
+           <input type="checkbox" name="checkbox1" id="emailm" value="emailm"><label class="emailm-label four col" for="emailm">Email Marketing</label>
+         </section>
+         <section class="user details mf">
+           <h3>Fill in your details</h3>
+  
+             <p>First Name:</p>
+             <input type="text" name="firstname" placeholder="First Name">
+             <p>Last Name:</p>
+             <input type="text" name="lastname" placeholder="Last Name">
+             <p>Email:</p>
+             <input type="text" name="email" placeholder="Email">
+             <p>Company Name:</p>
+             <input type="text" name="companyname" placeholder="Company Name">
+             <p>Job Title:</p>
+             <input type="text" name="jobtitle" placeholder="Job Title">
+             <p>Are you a startup?</p>
+             <input type="radio" name="radio1" id="yes" value="yes"><label class="yes-label four col" for="yes">Yes</label>
+             <input type="radio" name="radio1" id="no" value="no"><label class="no-label four col" for="no">No</label>
+           
+           
+         </section>
+         <section class="payment-type cf">
+           
+         </section>  
+         <button class="submit" type="submit">Submit</button>  
+       </form>
+       <script>
+
+         const form = document.getElementById("form");
+         form.addEventListener("submit", function(e) {
+           e.preventDefault();
+
+           const formData = new FormData(form);
+           
+           console.log([...formData]);
+         }
+         
+         )
+
+       </script>
+    </div>
+</body>
